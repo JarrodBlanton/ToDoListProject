@@ -1,0 +1,26 @@
+body {
+    /* background: purple; */
+}
+
+#container {
+    border: 2px solid rgb(188, 185, 185);
+    /* You have to set a width before you can center it */
+    /* Don't know why it's taken me this long to notice this... */
+    /* ...we're not going to talk about it. */
+    width: 360px;
+    margin: 0 auto;
+}
+
+#todo {
+    
+    box-sizing: border-box;    
+    display: block;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
