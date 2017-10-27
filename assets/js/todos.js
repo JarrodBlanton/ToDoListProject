@@ -28,9 +28,14 @@ $("input[type='text']").keypress(function(event) {
         var item = $(this).val();
         
         // Append item to list
-        $("ul").append("<li><span>X</span> "+ item.toString());
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span> "+ item.toString());
 
         // Empty textbox
         $(this).val(""); 
     }
+});
+
+// Click listener for plus button to fade in/out the form
+$(".fa-plus").on("click", function () {
+    $("input[type='text']").fadeToggle(500, 'linear');
 });

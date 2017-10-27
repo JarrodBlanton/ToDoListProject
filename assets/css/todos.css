@@ -1,19 +1,95 @@
+body {
+    font-family: Roboto, sans-serif;
+    /* Gradient taken from uiGradient */
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
+
+h1 {
+    background: #283048;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+ul {
+    /* Takes off the bullets */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+li:nth-child(2n) {
+    background: #f7f7f7;
+}
+
+/* Styling for trash cans */
+span {
+    width: 0px;
+    height: 40px;
+    /* this allows us to make sure the width and height settings actually matter, they retain block-level characteristics */
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    background-color: #e74c3c;
+    transition: .2s linear;
+    opacity: 0;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1;
+}
+
+
 #container {
-    border: 2px solid rgb(188, 185, 185);
     /* You have to set a width before you can center it */
     /* Don't know why it's taken me this long to notice this... */
     /* ...we're not going to talk about it. */
     width: 360px;
-    margin: 0 auto;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 #todo {
     
+    font-size: 18px;
+    color: #414b67;
+    background: #f7f7f7;
+    /* Controls size of the box... yeah. */
     box-sizing: border-box;    
-    display: block;
+    /* display: block; */
     width: 100%;
     margin: 0;
+    padding: 13px 13px;
+    /* This fixes the problem where the button doesn't sit flush with the container */
+    border: 3px solid rgba(0, 0, 0, 0);
     
+}
+
+#todo:focus {
+    background: #fff;
+    border: 2px solid #1f2122;
+    outline: none;
+}
+
+.fa-plus {
+    float: right;
 }
 
 .completed {
